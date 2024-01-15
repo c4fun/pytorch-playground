@@ -1,2 +1,6 @@
 **/data/
+# Model file
 **/*.pth
+
+# Tensorboard files
+**/runs/**
