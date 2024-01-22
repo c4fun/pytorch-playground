@@ -4,3 +4,6 @@
 
 # Tensorboard files
 **/runs/**
+
+# binarys
+**/__pycache__
