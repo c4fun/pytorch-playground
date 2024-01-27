@@ -4,7 +4,7 @@ import os
 
 device = ("cuda" if torch.cuda.is_available() else "cpu")
 # Cannot run because the model is too large
-model_name_or_path = os.path.expanduser("~/models/firefly-mixtral-8x7b")
+model_name_or_path = os.path.expanduser("~/models/TheBloke/mixtral-8x7b-instruct/mixtral-8x7b-instruct-v0.1.Q4_K_M.gguf")
 max_new_tokens = 500
 top_p = 0.9
 temperature = 0.35
@@ -16,7 +16,7 @@ model = AutoModelForCausalLM.from_pretrained(
     model_name_or_path,
     trust_remote_code=True,
     low_cpu_mem_usage=True,
-    torch_dtype=torch.bfloat16,
+    load_in_4bit=True,
     device_map=device
 )
 model = model.eval()
