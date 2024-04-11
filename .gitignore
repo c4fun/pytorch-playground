@@ -7,3 +7,7 @@
 
 # binarys
 **/__pycache__
+*.wav
+
+# Local files
+.env
