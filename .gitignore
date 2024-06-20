@@ -11,3 +11,6 @@
 
 # Local files
 .env
+
+# output files
+azure/tts/output/
